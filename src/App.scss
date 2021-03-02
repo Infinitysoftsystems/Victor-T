@@ -1,0 +1,134 @@
+/**
+ * Main App scss file
+ */
+ @import '~bryntum-schedulerpro/schedulerpro.stockholm.css';
+
+
+img.b-resource-image {
+        display: none !important;
+}
+#unplannedContainer {
+    .b-grid-row {
+        padding: 10px;
+        color: #000000;
+        box-shadow: 0px 0 5px rgb(0 0 0 / 10%);
+        border-left: 5px solid #3a7bdb;
+        transition: all .5s;
+        margin: 10px 5px;
+        background: transparent;
+        height: 45px !important;
+    }
+    header {
+        display: none;
+    }
+}
+
+#root {
+    position: relative;
+    flex: 1 1 100%;
+    min-height: 0;
+    flex-direction: column;
+    transform: translate(0);
+    top: 0;
+    left: 0;
+}
+.side-panel-container {
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: red;
+}
+.demo-header {
+    display: flex;
+    flex-shrink: 0;
+    padding: 1em 0;
+    transition: background-color .5s,padding .5s,font-size .1s;
+    background-color: #1e88e5;
+    color: #fff;
+
+    #title {
+        display: inline-flex;
+        align-items: center;
+        padding-left: 2.1em;
+        font-size: 1.3em;
+        background-size: 1.6em;
+        background-position-y: center;
+        white-space: nowrap;
+        color: white;
+    }
+}
+#title-container {
+    display: inline-flex;
+    align-items: stretch;
+    flex: 1;
+    overflow: hidden;
+}
+
+#tools {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    transition: background-color 0s, margin-top .3s;
+}
+ .b-sch-event {
+    border-radius : 3px;
+    box-shadow    : 0 1px 1px 0 rgba(0, 0, 0, .25);
+}
+
+#main {
+    display        : flex;
+    flex-direction : row;
+    height         : 100vh;
+
+    .b-react-schedulerpro-container {
+        flex     : 1 1 0;
+        overflow : hidden;
+    }
+
+    #unplannedContainer {
+        width       : 300px;
+
+        .b-gridbase {
+            flex        : none;
+            border-left : 2px solid #aaa;
+
+            .b-grid-cell {
+                cursor : pointer;
+            }
+
+            i {
+                margin-right : 10px;
+                color        : #4887e5;
+            }
+        }
+    }
+}
+
+.b-grid-header {
+    height: 57px;
+}
+
+.b-sch-event.b-drag-invalid {
+    background : red;
+}
+
+.b-unassigned-class.b-drag-proxy:not(.b-drag-invalid) {
+    background : green;
+}
+
+.b-aborting.b-unassigned-class {
+    transition : transform 0.3s !important;
+
+    // https://app.assembla.com/spaces/bryntum/tickets/7168-drag-drop-cleanup-code-on-abort-is-interfering-with-animation/details#
+    background     : red;
+    position       : absolute !important;
+    z-index        : 10000;
+    pointer-events : none;
+    opacity        : 0.8;
+    box-sizing     : border-box;
+}
+
+// eof
