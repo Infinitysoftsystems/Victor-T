@@ -28,7 +28,7 @@ export default class UnplannedGrid extends Grid {
                 flex       : 1,
                 field      : 'name',
                 htmlEncode : false,
-                renderer   : (data) => `<i class="${data.record.iconCls}"></i>${data.record.name}`
+                renderer   : (data) => `${data.record.name} ${data.record.duration}${data.record.durationUnit}`
             }],
 
             rowHeight : 50

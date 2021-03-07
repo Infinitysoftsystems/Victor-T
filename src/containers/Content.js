@@ -24,37 +24,6 @@ const Content = props => {
         // so we create it before to be accessible by both
         eventStore = new TaskStore();
 
-        // const resources = [
-        //     { id : 1, name : 'Henrik' },
-        //     { id : 2, name : 'Linda' },
-        //     { id : 3, name : 'Rob' }
-        // ], events = [
-        //     {
-        //         id         : 1,
-        //         resourceId : 1,
-        //         startDate  : new Date(2020, 4, 14, 7, 30),
-        //         endDate    : new Date(2020, 4, 14, 9),
-        //         name       : 'Workout',
-        //         eventColor : 'orange'
-        //     },
-        //     {
-        //         id         : 2,
-        //         resourceId : 2,
-        //         startDate  : new Date(2020, 4, 14, 8),
-        //         endDate    : new Date(2020, 4, 14, 10, 30),
-        //         name       : 'Meeting',
-        //         eventColor : 'blue'
-        //     },
-        //     { 
-        //       id : 3, 
-        //       resourceId : 3, 
-        //       startDate : new Date(2020, 4, 14, 10), 
-        //       endDate : new Date(2020, 4, 14, 10), 
-        //       name : 'Coffee break',
-        //       eventColor : 'red'
-        //     }
-        // ];
-
         const events = [
             {
                 "id"           : "r1",
@@ -209,7 +178,7 @@ const Content = props => {
             grid         : grid.current.unplannedGrid,
             schedule     : scheduler.current.schedulerInstance,
             constrain    : false,
-            outerElement : grid.current.unplannedGrid.element
+            outerElement : grid.current.unplannedGrid
         });
 
         Toast.show({
