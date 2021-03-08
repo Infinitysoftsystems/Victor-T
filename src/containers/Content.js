@@ -178,7 +178,7 @@ const Content = props => {
             grid         : grid.current.unplannedGrid,
             schedule     : scheduler.current.schedulerInstance,
             constrain    : false,
-            outerElement : grid.current.unplannedGrid
+            // outerElement : grid.current.unplannedGrid
         });
 
         Toast.show({
